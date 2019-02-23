@@ -6,6 +6,7 @@ from pygame.locals import *
 class Collect:
 
     def check_items(self, item_list, mcgyver_position, collect):
+    #update which items are collected into collect list
         if mcgyver_position == item_list[0]:
             collect[0] = 1
         if mcgyver_position == item_list[1]:
@@ -17,6 +18,7 @@ class Collect:
         return collect
 
     def check_win(self, mcgyver_position, tina_position, window):
+    #check if the user has win or not, permit to quit the game in case of win
         ending = pygame.image.load("ressource/Victoire.png").convert()
         victory = ending.get_rect()
         if tuple(mcgyver_position) == tuple(tina_position[0]):

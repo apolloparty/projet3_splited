@@ -4,10 +4,12 @@ from pygame.locals import *
 class User:
 
     def entry_user(self):
+    #off if pygame not active, take input keyboard from user
         move = input("Entrez ZQSD pour vous déplacer : ")
         return move
 
     def entry_raw(self):
+    #initialize pygame keyboard entry events, permit to close program
         pygame.init()
         move = ""
         passing = 1

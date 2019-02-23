@@ -6,6 +6,7 @@ from pygame.locals import *
 class Items:
 
     def items_position(self, space_list, maps):
+        #calc random position from space_list and update maps  
         item_list = []
 
         space_rand = random.randint(0, len(space_list) - 1)

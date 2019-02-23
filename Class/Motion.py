@@ -1,5 +1,5 @@
 class Motion:
-
+    #limit position possible, check if the next position is valid, update maps variable
     def check_direction(self, move, mcy, mcx, maps, collect):
         if move == "z":
             if mcy == 0:

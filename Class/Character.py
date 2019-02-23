@@ -4,10 +4,9 @@ import pygame
 from pygame.locals import *
 
 class Character:
-    def __init__(self):
-        pass
 
     def mcgyver(self, maps):
+    #Give mcgyver position as coordinates usable for others objects
         mcgyver_position = []
         mcx = 0
         mcy = 0

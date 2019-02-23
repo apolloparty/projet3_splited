@@ -6,6 +6,7 @@ from pygame.locals import *
 class Labyrinth:
 
     def open_map(self):
+    #open maps file and convert it as list with coordinates then print line of maps list
         maps = []
         x = 0
         y = 1
@@ -24,6 +25,7 @@ class Labyrinth:
         return maps
 
     def register_fixed(self, maps):
+    #browse maps list to create coordinates for each items usable for other class
         space_list = []
         wall_list = []
         tina_position = []
