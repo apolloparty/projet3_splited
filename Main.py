@@ -11,6 +11,7 @@ import Class.Pygame as Ga
 import Class.User as Us
 
 def main():
+    #define collect init, load ressources classes and struct the program
     collect = [0, 0, 0]
     maps = La.Labyrinth().open_map()
     space_list, wall_list, tina_position = La.Labyrinth().register_fixed(maps)
