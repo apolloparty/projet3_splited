@@ -24,8 +24,11 @@ class Collect:
         losing = pygame.image.load("ressource/Défaite.png").convert()
         lose = losing.get_rect()
 
-        if tuple(mcgyver_position) == tuple(tina_position[1]) and collect != [1, 1, 1]:
-            print("YOU LOSE")
+        if (
+                tuple(mcgyver_position) == tuple(tina_position[1])
+                and collect != [1, 1, 1]
+            ):
+            print("YOU LOST")
             while 1:
                 for event in pygame.event.get():
                     window.blit(losing, (0, 0))
