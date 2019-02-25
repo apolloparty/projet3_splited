@@ -4,13 +4,12 @@ import pygame
 from pygame.locals import *
 
 class Pygame:
-
+    """paint movables and statik images into Pygame, using list from different Classes"""
     def unmovable(self, wall_list, space_list):
-    #initialize viewable window then paint wall and ground pattern and refresh display 
+        """initialize viewable window then paint wall and ground pattern and refresh display"""
         i = 0
         j = 0
 
-        pygame.init()
         window = pygame.display.set_mode((480, 480), RESIZABLE)
         wall = pygame.image.load("ressource/mur.png").convert()
         wall.get_rect()
@@ -26,7 +25,7 @@ class Pygame:
         return window, space
 
     def movable(self, window, item_list, tina_position):
-    #paint movable items except macgyver then refresh display
+        """paint movable items except macgyver then refresh display"""
         itemx = pygame.image.load("ressource/item1.png").convert_alpha()
         itemx.get_rect()
         window.blit(itemx, tuple(32*x for x in item_list[0]))
@@ -42,7 +41,8 @@ class Pygame:
         pygame.display.flip()
 
     def display_mac(self, window, mcgyver_position, space):
-    #paint macgyver image on the new position and replace the old position with ground pattern
+        """paint macgyver image on the new position and
+        replace the old position with ground pattern"""
         mac = pygame.image.load("ressource/MacGyver.png").convert()
         mac.get_rect()
         window.blit(mac, tuple(32*x for x in mcgyver_position))

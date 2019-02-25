@@ -9,7 +9,7 @@ class User:
         return move
 
     def entry_raw(self):
-    #initialize pygame keyboard entry events, permit to close program
+        """initialize pygame keyboard entry events, permit to close program"""
         pygame.init()
         move = ""
         passing = 1

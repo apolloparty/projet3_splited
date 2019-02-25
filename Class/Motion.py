@@ -1,13 +1,14 @@
 class Motion:
-    #limit position possible, check if the next position is valid, update maps variable
+    """limit position possible, check if the next position is valid, update maps variable"""
     def check_direction(self, move, mcy, mcx, maps, collect):
+        """limit position possible, check if the next position is valid, update maps variable"""
         if move == "z":
             if mcy == 0:
                 pass
             elif (
-                maps[mcy - 1][mcx] == "X" or
-                maps[mcy - 1][mcx] == "Y" or
-                maps[mcy - 1][mcx] == "Z"
+                    maps[mcy - 1][mcx] == "X" or
+                    maps[mcy - 1][mcx] == "Y" or
+                    maps[mcy - 1][mcx] == "Z"
                 ):
                 maps[mcy][mcx] = " "
                 maps[mcy - 1][mcx] = "M"
@@ -18,9 +19,9 @@ class Motion:
             if mcy == 14:
                 pass
             elif (
-                maps[mcy + 1][mcx] == "X" or
-                maps[mcy + 1][mcx] == "Y" or
-                maps[mcy + 1][mcx] == "Z"
+                    maps[mcy + 1][mcx] == "X" or
+                    maps[mcy + 1][mcx] == "Y" or
+                    maps[mcy + 1][mcx] == "Z"
                 ):
                 maps[mcy][mcx] = " "
                 maps[mcy + 1][mcx] = "M"
@@ -31,9 +32,9 @@ class Motion:
             if mcx == 0:
                 pass
             elif (
-                maps[mcy][mcx - 1] == "X" or
-                maps[mcy][mcx - 1] == "Y" or
-                maps[mcy][mcx - 1] == "Z"
+                    maps[mcy][mcx - 1] == "X" or
+                    maps[mcy][mcx - 1] == "Y" or
+                    maps[mcy][mcx - 1] == "Z"
                 ):
                 maps[mcy][mcx] = " "
                 maps[mcy][mcx - 1] = "M"
@@ -48,9 +49,9 @@ class Motion:
             if mcx == 14:
                 pass
             elif (
-                maps[mcy][mcx + 1] == "X" or
-                maps[mcy][mcx + 1] == "Y" or
-                maps[mcy][mcx + 1] == "Z"
+                    maps[mcy][mcx + 1] == "X" or
+                    maps[mcy][mcx + 1] == "Y" or
+                    maps[mcy][mcx + 1] == "Z"
                 ):
                 maps[mcy][mcx] = " "
                 maps[mcy][mcx + 1] = "M"
