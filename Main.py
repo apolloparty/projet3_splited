@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: Utf-8 -*
+
 import random
 from itertools import chain
 import pygame
