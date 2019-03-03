@@ -3,6 +3,7 @@ from itertools import chain
 import pygame
 from pygame.locals import *
 
+
 class Items:
 
     def items_position(self, space_list, maps):

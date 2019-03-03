@@ -1,7 +1,8 @@
 class Motion:
-    """limit position possible, check if the next position is valid, update maps variable"""
+
     def check_direction(self, move, mcy, mcx, maps, collect):
-        """limit position possible, check if the next position is valid, update maps variable"""
+        """limit position possible, check if the next position is valid,
+        then update maps variable"""
         if move == "z":
             if mcy == 0:
                 pass
@@ -9,7 +10,7 @@ class Motion:
                     maps[mcy - 1][mcx] == "X" or
                     maps[mcy - 1][mcx] == "Y" or
                     maps[mcy - 1][mcx] == "Z"
-                ):
+            ):
                 maps[mcy][mcx] = " "
                 maps[mcy - 1][mcx] = "M"
             elif maps[mcy - 1][mcx] == " ":
@@ -22,7 +23,7 @@ class Motion:
                     maps[mcy + 1][mcx] == "X" or
                     maps[mcy + 1][mcx] == "Y" or
                     maps[mcy + 1][mcx] == "Z"
-                ):
+            ):
                 maps[mcy][mcx] = " "
                 maps[mcy + 1][mcx] = "M"
             elif maps[mcy + 1][mcx] == " ":
@@ -35,7 +36,7 @@ class Motion:
                     maps[mcy][mcx - 1] == "X" or
                     maps[mcy][mcx - 1] == "Y" or
                     maps[mcy][mcx - 1] == "Z"
-                ):
+            ):
                 maps[mcy][mcx] = " "
                 maps[mcy][mcx - 1] = "M"
             elif maps[mcy][mcx - 1] == "T":
@@ -52,7 +53,7 @@ class Motion:
                     maps[mcy][mcx + 1] == "X" or
                     maps[mcy][mcx + 1] == "Y" or
                     maps[mcy][mcx + 1] == "Z"
-                ):
+            ):
                 maps[mcy][mcx] = " "
                 maps[mcy][mcx + 1] = "M"
             elif maps[mcy][mcx + 1] == " ":

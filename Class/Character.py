@@ -3,10 +3,12 @@ from itertools import chain
 import pygame
 from pygame.locals import *
 
+
 class Character:
 
     def mcgyver(self, maps):
-    #Give mcgyver position as coordinates usable for others objects
+
+        """Give mcgyver position as coordinates usable for others objects"""
         mcgyver_position = []
         mcx = 0
         mcy = 0

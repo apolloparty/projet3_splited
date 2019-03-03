@@ -1,10 +1,11 @@
 import pygame
 from pygame.locals import *
 
+
 class User:
 
     def entry_user(self):
-    #off if pygame not active, take input keyboard from user
+        """off if pygame not active, take input keyboard from user"""
         move = input("Entrez ZQSD pour vous déplacer : ")
         return move
 

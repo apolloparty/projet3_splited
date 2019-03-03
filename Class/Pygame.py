@@ -3,10 +3,13 @@ from itertools import chain
 import pygame
 from pygame.locals import *
 
+
 class Pygame:
-    """paint movables and statik images into Pygame, using list from different Classes"""
+    """paint movables and statik images into Pygame,
+    using list from different variable from classes"""
     def unmovable(self, wall_list, space_list):
-        """initialize viewable window then paint wall and ground pattern and refresh display"""
+        """initialize viewable window, then paint wall, ground pattern
+        then refresh display"""
         i = 0
         j = 0
 
